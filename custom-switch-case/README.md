@@ -1,6 +1,6 @@
 ## Question: 
     
-<CustomSwitch value="20">
+```<CustomSwitch value="20">
   <CustomCase value={(e) => e > 10}>
     <div>Hello 20</div>
   </CustomCase>
@@ -14,4 +14,4 @@
   </CustomCase>
 
   <DefaultCase>Hello 40</DefaultCase>
-</CustomSwitch>
+</CustomSwitch>```
