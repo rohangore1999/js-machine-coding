@@ -12,7 +12,7 @@ const App = () => {
 
   return (
     <>
-      <Example fn={() => {}} />
+      <Example count={count} />
 
       <button onClick={() => setCount(count + 1)}>click me</button>
     </>
