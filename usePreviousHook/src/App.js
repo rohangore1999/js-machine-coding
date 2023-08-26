@@ -1,14 +1,7 @@
-import React, { useState, useEffect, useRef } from "react";
+import React, { useState } from "react";
 
-const usePrevious = (value) => {
-  const ref = useRef();
-
-  useEffect(() => {
-    ref.current = value;
-  }, [value]);
-
-  return ref.current;
-};
+// Hooks
+import { usePrevious } from "./hooks/usePrevious";
 
 const App = () => {
   const [currentValue, setCurrentValue] = useState(0);
