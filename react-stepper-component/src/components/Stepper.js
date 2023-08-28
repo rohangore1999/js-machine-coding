@@ -36,7 +36,6 @@ const Stepper = ({ list }) => {
   //   };
 
   const onNext = () => {
-    debugger;
     console.log(currentStep);
     if (currentStep < stepSize - 1) {
       setCurrentStep(currentStep + 1);
