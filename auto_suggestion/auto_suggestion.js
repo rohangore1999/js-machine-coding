@@ -99,5 +99,5 @@ function getSuggestions(text) {
   input.addEventListener("focus", onFocus);
   window.addEventListener("click", onBlur);
   input.addEventListener("keyup", onChange);
-  suggestionArea.addEventListener("click", handleClick, true); // by passing true will capture any of the event
+  suggestionArea.addEventListener("click", handleClick); // by passing true will capture any of the event
 })();
