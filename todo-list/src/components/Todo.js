@@ -23,7 +23,7 @@ const Todo = ({
 
       <div
         className={`todo-text ${todo.isComplete && "strike"}`}
-        onDoubleClick={() => setEdit(true)}
+        onDoubleClick={() => !todo.isComplete && setEdit(true)}
       >
         {edit ? (
           <input
