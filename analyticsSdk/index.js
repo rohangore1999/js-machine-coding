@@ -2,7 +2,7 @@ const SDK = function () {
   this.logs = [];
   this.count = 1;
 
-  // Storing events
+  // Storing events - Function
   this.log = (events) => {
     this.logs.push(events);
   };

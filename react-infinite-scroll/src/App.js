@@ -21,7 +21,7 @@ const App = () => {
     window.addEventListener("scroll", handleScroll);
   }, [count]);
 
-  return <main>{divs.map((div) => div)}</main>;
+  return <main>{divs}</main>;
 };
 
 export default App;
