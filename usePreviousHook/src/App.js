@@ -17,7 +17,7 @@ const App = () => {
       {prevValue}
 
       <div>
-        <button onClick={() => setCurrentValue(currentValue + 1)}>
+        <button onClick={() => setCurrentValue((prevVal) => prevVal + 1)}>
           Click me!
         </button>
       </div>
