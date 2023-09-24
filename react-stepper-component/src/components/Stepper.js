@@ -4,7 +4,6 @@ import React, { useState } from "react";
 import "./Stepper.css";
 
 const Stepper = ({ list }) => {
-  console.log(list[0]);
   const stepDivs = [];
   const stepSize = list.length;
 
