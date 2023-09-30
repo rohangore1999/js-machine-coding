@@ -1,4 +1,4 @@
-const FRUITS = ["Apple", "Mango", "Banana", "Orange"];
+const FRUITS = ["Apple", "AA","Mango", "Banana", "Orange"];
 
 const getSuggestion = (keyword) => {
   const result = FRUITS.filter(
