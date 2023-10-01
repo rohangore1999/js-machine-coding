@@ -30,22 +30,22 @@ const flatternJson = (json) => {
   return result;
 };
 
-const flatternJson = (json, parentKey = "") => {
-  let result = {};
+// const flatternJson = (json, parentKey = "") => {
+//   let result = {};
 
-  for (let key in json) {
-    let newKey = parentKey ? `${parentKey}.${key}` : key;
+//   for (let key in json) {
+//     let newKey = parentKey ? `${parentKey}.${key}` : key;
 
-    if (typeof json[key] === "object" && !Array.isArray(json[key])) {
-      const res = flatternJson(json[key], newKey);
+//     if (typeof json[key] === "object" && !Array.isArray(json[key])) {
+//       const res = flatternJson(json[key], newKey);
 
-      result = { ...result, ...res };
-    } else {
-      result[newKey] = json[key];
-    }
-  }
+//       result = { ...result, ...res };
+//     } else {
+//       result[newKey] = json[key];
+//     }
+//   }
 
-  return result;
-};
+//   return result;
+// };
 
 console.log(flatternJson(json));
