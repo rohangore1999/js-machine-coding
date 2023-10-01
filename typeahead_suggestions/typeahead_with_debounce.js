@@ -38,6 +38,7 @@
     result.forEach((element) => {
       const liBlock = document.createElement("li");
       liBlock.innerText = element;
+      liBlock.style.cursor = "pointer";
 
       ulBlock.appendChild(liBlock);
     });
@@ -62,5 +63,22 @@
     pushToSuggestionBox(result);
   };
 
+  const handleClick = (e) => {
+    const text = e.target.innerText;
+    console.log(text);
+
+    input.value = text;
+  };
+
+  const onBlur = (e) => {
+    if (e.target.input || e.target.suggestionBox) {
+      return;
+    }
+
+    suggestionBox.style.display = "none";
+  };
+
   input.addEventListener("keyup", myDebounce(onchange, 500));
+  window.addEventListener("click", onBlur);
+  suggestionBox.addEventListener("click", handleClick);
 })();
