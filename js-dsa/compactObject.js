@@ -6,6 +6,7 @@ const compactObject = (obj) => {
     return obj;
   }
 
+  // if Array
   if (Array.isArray(obj)) {
     const arrRes = [];
 
@@ -19,6 +20,7 @@ const compactObject = (obj) => {
     return arrRes;
   }
 
+  // if Object
   const objRes = {};
 
   for (let i in obj) {
