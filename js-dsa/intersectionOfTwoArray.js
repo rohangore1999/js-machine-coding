@@ -26,4 +26,10 @@ const intersection_otp = function (nums1, nums2) {
   return [...new Set(nums2.filter((n) => s1.has(n)))];
 };
 
+const intersection_otp2 = function (nums1, nums2) {
+  let s1 = new Set(nums1);
+
+  return [...new Set(nums2.filter((n) => s1.has(n)))];
+};
+
 console.log(intersection(nums1, nums2));
