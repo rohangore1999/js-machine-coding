@@ -64,7 +64,8 @@ const Stepper = ({ list }) => {
       </div> */}
 
       <div className="content">
-        {/* React.cloneElement will take an Obj (as list[currentStep] is as jsx obj) and extent the properties with onPrev and onNext to that JSX so that they can extract and use those props*/}
+        {/* React.cloneElement will take an Obj (as list[currentStep] is as jsx obj) and extent the 
+        properties with onPrev and onNext to that JSX so that they can extract and use those props*/}
         {React.cloneElement(list[currentStep], { onPrev, onNext })}
       </div>
     </>
