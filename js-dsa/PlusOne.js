@@ -1,4 +1,5 @@
-const digits = [1,9];
+// https://leetcode.com/problems/plus-one/description/
+const digits = [1, 9];
 
 // const plusOne = function (digits) {
 //   let strDig = "";
@@ -33,7 +34,7 @@ const plusOne = function (digits) {
   }
 
   digits.unshift(1);
-  
+
   return digits;
 };
 

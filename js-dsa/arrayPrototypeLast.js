@@ -1,3 +1,4 @@
+// https://leetcode.com/problems/array-prototype-last/description/?envType=study-plan-v2&envId=30-days-of-javascript
 Array.prototype.last = function () {
   if (!this.slice(-1).length) {
     console.log(-1);

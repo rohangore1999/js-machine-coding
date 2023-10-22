@@ -1,3 +1,4 @@
+// https://leetcode.com/problems/best-time-to-buy-and-sell-stock/description/
 const prices = [1, 2];
 // const maxProfit = (prices) => {
 //   let maxProfit = 0;

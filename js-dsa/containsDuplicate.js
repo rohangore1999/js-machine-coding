@@ -1,3 +1,4 @@
+// https://leetcode.com/problems/contains-duplicate/description/
 const nums = [1, 2, 3, 4];
 
 const containsDuplicate = function (nums) {

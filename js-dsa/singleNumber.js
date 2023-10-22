@@ -1,3 +1,4 @@
+// https://leetcode.com/problems/single-number/description/
 const nums = [4, 1, 2, 1, 2];
 
 const singleNumber = function (nums) {
@@ -19,7 +20,7 @@ const singleNumber_optimal = function (nums) {
     res = res ^ i;
   }
 
-  return res
+  return res;
 };
 
 console.log(singleNumber_optimal(nums));

@@ -1,3 +1,4 @@
+// https://leetcode.com/problems/remove-element/description/
 const nums = [3, 3];
 const val = 3;
 

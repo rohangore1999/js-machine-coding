@@ -1,3 +1,5 @@
+// https://leetcode.com/problems/compact-object/description/?envType=study-plan-v2&envId=30-days-of-javascript
+
 const obj = [null, 0, 5, [0], [{ a: null, b: [false, 1] }]];
 
 const compactObject = (obj) => {

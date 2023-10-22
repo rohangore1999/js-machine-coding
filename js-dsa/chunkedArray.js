@@ -1,3 +1,4 @@
+// https://leetcode.com/problems/chunk-array/description/?envType=study-plan-v2&envId=30-days-of-javascript
 var chunk = function (arr, size) {
   //   let i = 0;
   //   let chunkedArrResult = [];

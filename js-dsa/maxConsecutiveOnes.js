@@ -1,3 +1,4 @@
+// https://leetcode.com/problems/max-consecutive-ones/description/
 const nums = [1, 1, 0, 1, 1, 1];
 
 // const findMaxConsecutiveOnes = function (nums) {

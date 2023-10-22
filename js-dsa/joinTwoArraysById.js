@@ -1,3 +1,5 @@
+// https://leetcode.com/problems/join-two-arrays-by-id/description/?envType=study-plan-v2&envId=30-days-of-javascript
+
 const arr1 = [
   { id: 1, x: 2, y: 3 },
   { id: 2, x: 3, y: 6 },

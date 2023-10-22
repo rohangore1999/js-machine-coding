@@ -1,3 +1,4 @@
+// https://leetcode.com/problems/assign-cookies/description/
 let g = [10, 9, 8, 7],
   s = [5, 6, 7, 8];
 

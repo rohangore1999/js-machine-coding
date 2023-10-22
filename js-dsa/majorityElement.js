@@ -1,3 +1,4 @@
+// https://leetcode.com/problems/majority-element/description/
 const nums = [2, 2, 1, 1, 1, 2, 2];
 
 const majorityElement = function (nums) {
@@ -22,7 +23,7 @@ const majorityElement_optimal = function (nums) {
   let major = nums[0];
   let cnt = 1;
 
-  for (let i of nums) {
+  for (let i = 1; i < nums.length; i++) {
     if (cnt === 0) {
       major = nums[i];
       cnt = 1;

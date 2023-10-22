@@ -1,3 +1,4 @@
+// https://leetcode.com/problems/intersection-of-two-arrays/description/
 const nums1 = [2, 1];
 const nums2 = [1, 2];
 

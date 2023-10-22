@@ -12,7 +12,7 @@ const isSorted = (arr) => {
 
   return true;
 };
-
+  
 const sortArray = (arr) => {
   if (isSorted(arr)) {
     newArray = arr;

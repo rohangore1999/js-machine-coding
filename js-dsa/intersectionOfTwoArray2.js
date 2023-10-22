@@ -1,3 +1,4 @@
+// https://leetcode.com/problems/intersection-of-two-arrays-ii/description/
 const nums1 = [2, 1];
 const nums2 = [1, 2];
 
@@ -15,7 +16,7 @@ const intersect = function (nums1, nums2) {
     } else if (nums1[i] > nums2[j]) {
       j++;
     } else {
-      if(res.includes(nums1[i]))res.push(nums1[i]);
+      if (res.includes(nums1[i])) res.push(nums1[i]);
       i++;
       j++;
     }

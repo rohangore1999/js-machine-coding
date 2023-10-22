@@ -1,3 +1,4 @@
+// https://leetcode.com/problems/range-sum-query-immutable/description/
 const NumArray = function (nums) {
   this.nums = nums;
 };
