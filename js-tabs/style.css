@@ -1,0 +1,26 @@
+#tab-links {
+  background-color: black;
+  overflow: hidden;
+}
+
+#tab-links button {
+  float: left;
+  padding: 1rem;
+  border: none;
+  cursor: pointer;
+  background-color: black;
+  color: white;
+}
+
+#tab-links button.active {
+  background-color: white;
+  color: black;
+}
+
+#tab-links button:hover {
+  background-color: darkgray;
+}
+
+.tab-content {
+  display: none;
+}
