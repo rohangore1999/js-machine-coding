@@ -14,3 +14,15 @@ const containsDuplicate = function (nums) {
 };
 
 console.log(containsDuplicate(nums));
+
+// Using Hash Map
+var containsDuplicate_MAP = function (nums) {
+  let map = new Map();
+  for (let i = 0; i < nums.length; i++) {
+    if (map.has(nums[i])) return true;
+
+    map.set(nums[i], true);
+  }
+
+  return false;
+};
