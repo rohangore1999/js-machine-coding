@@ -17,6 +17,7 @@ let nums = [1, 2, 3, 4];
 //   }
 
 //   return Array.from(resObj.values());
+// The Array.from() static method creates a new, shallow-copied Array instance from an iterable or array-like object.
 // };
 
 // Optimise: O(n)

@@ -1,4 +1,8 @@
 // https://leetcode.com/problems/missing-number/description/
+// [3,0,1]
+//  0 1 2 3 <- i
+// all the elem will cutoff expect 2
+
 const nums = [9, 6, 4, 2, 3, 5, 7, 0, 1];
 
 const missingNumber = function (nums) {
