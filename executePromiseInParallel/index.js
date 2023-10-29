@@ -26,7 +26,7 @@ let tasks = [
   createAsyncTask(),
 ];
 
-const asyncParallel = async (tasks, cb) => {
+const asyncParallel = (tasks, cb) => {
   let ress = [];
   let errs = [];
 
