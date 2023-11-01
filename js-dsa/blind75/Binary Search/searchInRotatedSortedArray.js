@@ -20,7 +20,7 @@ const search = function (nums, target) {
       } else {
         // search in right side
         l = m + 1;
-      }
+      } 
     } else {
       // mid is in right sorted portion
       if (nums[r] >= target && nums[m] <= target) {
