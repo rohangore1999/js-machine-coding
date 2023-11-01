@@ -30,6 +30,22 @@ const flatternJson = (json) => {
   return result;
 };
 
+// -------------------------------------------------------
+
+//  json-
+// const json = {
+//   a: {
+//     b: {
+//       c: 1,
+//     },
+//   },
+// d: [45, 78],
+// z: true
+// };
+
+// output flat json-
+// {"a.b.c": 1, "d.0": 45, "d.1": 78, "z": true}
+
 // const flatternJson = (json, parentKey = "") => {
 //   let result = {};
 
