@@ -29,7 +29,7 @@ const asyncSequence = async (tasks, callback) => {
   for (let task of tasks) {
     console.log({ task });
     try {
-      // here we are awaiting for task; try here to change it to map, it will function as parallel
+      // here we are awaiting for task
       let res = await task;
       results.push(res);
     } catch (e) {

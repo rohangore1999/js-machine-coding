@@ -40,7 +40,7 @@ const asyncParallel = (tasks, cb) => {
         console.log("after then");
         console.log({ val });
         ress.push(val);
-      }).then(()=>{console.log("then 2")})
+      })
       .catch((err) => {
         console.log("after catch");
         console.log({ err });
