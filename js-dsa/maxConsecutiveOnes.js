@@ -1,32 +1,23 @@
 // https://leetcode.com/problems/max-consecutive-ones/description/
 const nums = [1, 1, 0, 1, 1, 1];
 
-// const findMaxConsecutiveOnes = function (nums) {
-//   let i = 0,
-//     j = 0,
-//     cnt = 0,
-//     maxCnt = 0;
+// Slding window
+// const len=nums.length
+// let left=0, right=0, max=0
+// while(right<len){
 
-//   while (j < nums.length) {
-//     if (nums[j] === 1) {
-//       cnt++;
-//       j++;
-//     } else {
-//       if (cnt > maxCnt) {
-//         maxCnt = cnt;
-//       }
-//       cnt = 0;
-//       i = j + 1;
-//       j++;
+//     if(nums[right]==1){
+//         max=Math.max(right-left+1, max)
+//         right++
+
 //     }
-//   }
+//     else if(nums[right]!=1) {
+//         right++
+//         left = right
+//     }
 
-//   if (cnt > maxCnt) {
-//     maxCnt = cnt;
-//   }
-
-//   return maxCnt;
-// };
+// }
+// return(max)
 
 // Using kadane's algo
 const findMaxConsecutiveOnes = function (nums) {

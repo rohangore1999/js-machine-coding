@@ -3,7 +3,7 @@
 const obj = [null, 0, 5, [0], [{ a: null, b: [false, 1] }]];
 
 const compactObject = (obj) => {
-  // it is not an array and object but null then return as it is
+  // it is not an array and object but null and actual value then return as it is
   if (typeof obj !== "object" || obj === null) {
     return obj;
   }
