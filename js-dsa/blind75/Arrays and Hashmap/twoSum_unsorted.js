@@ -8,7 +8,7 @@ var twoSum = function (nums, target) {
   for (let i = 0; i < nums.length; i++) {
     const rem = target - nums[i];
 
-    if (rem in value) {
+    if (value[rem]) {
       return [i, value[rem]];
     } else {
       value[nums[i]] = i;
