@@ -4,7 +4,7 @@ function encode(str) {
   let res = "";
 
   for (let i = 0; i < str.length; i++) {
-    res += str[i].length + "#" + str[i];
+    res += str[i].length + "#" + str[i]; // 4#neet4#code
   }
 
   return res;
