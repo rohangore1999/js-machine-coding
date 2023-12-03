@@ -1,29 +1,25 @@
-let s = [0, 0, 1],
-  k = 1;
-// 4
+let array = [{ id: "1" }, { id: "1" }, { id: "2" }];
 
-const longRepChr = (s, k) => {
-  let l = 0,
-    r = 0,
-    maxCnt = 0,
-    map = {};
-
-  for (let r = 0; r < s.length; r++) {
-    if (s[r] in map) {
-      map[s[r]] += 1;
-    } else {
-      map[s[r]] = 1;
-    }
-
-    while (r - l + 1 - Object.values(map).sort((a, b) => b - a)[0] > k) {
-      map[s[l]] -= 1;
-      l += 1;
-    }
-
-    maxCnt = Math.max(maxCnt, r - l + 1);
-  }
-  console.log({ map });
-  return maxCnt;
+const fn = function (item) {
+  return item.id;
 };
 
-console.log(longRepChr(s, k));
+// { '1': [ { id: '1' }, { id: '1' } ], '2': [ { id: '2' } ] }
+
+const group = (array, fn) => {
+  let result = {};
+
+  for (let arr of array) {
+    const fnRes = fn(arr);
+
+    if (!result[fnRes]) {
+      result[fnRes] = [];
+    }
+
+    result[fnRes].push(arr);
+  }
+
+  return result;
+};
+
+console.log(group(array, fn));

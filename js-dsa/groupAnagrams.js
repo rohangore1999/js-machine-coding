@@ -73,14 +73,12 @@ const groupAnagrams = (strs) => {
     mapping[anagramStr]
       ? mapping[anagramStr].push(word)
       : (mapping[anagramStr] = [word]);
-
-    console.log({ word });
-    console.log({ mapping });
   }
 
   return Object.values(mapping);
 };
 
-groupAnagrams(strs);
+console.log(groupAnagrams(strs));
+
 // Time Complexity: O(n*klog(k)) where n is the length of input array and k is the maximum length of a string in input array
 // Space Complexity: O(n)
