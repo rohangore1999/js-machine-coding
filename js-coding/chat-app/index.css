@@ -1,0 +1,46 @@
+.container {
+  height: 90vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.chat-container {
+  width: 800px;
+  height: 500px;
+  border: 1px solid black;
+  overflow-y: scroll;
+}
+
+.search {
+  padding: 10px;
+}
+
+input {
+  margin-top: 5px;
+  border: none;
+  outline: none;
+  border-bottom: 2px solid #000;
+  width: 100%;
+}
+
+/* chat list */
+
+.title-order-container {
+  margin: 0 10px;
+  flex: 1;
+}
+
+.chat-list {
+  padding: 20px;
+  display: flex;
+  align-items: center;
+}
+
+.chat-lists-container {
+  display: flex;
+}
+
+.chat-screen {
+  display: none;
+}
