@@ -13,13 +13,11 @@ const revArray = (arr, start, end) => {
 };
 
 const rotateArray = (arr, k) => {
+  k = k % arr.length;
+
   revArray(arr, 0, arr.length - 1);
-
   revArray(arr, 0, k - 1);
-
   revArray(arr, k, arr.length - 1);
-
-  console.log({ arr });
 };
 
 rotateArray(array, k);
