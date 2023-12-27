@@ -1,5 +1,5 @@
-let candidates = [10, 1, 2, 7, 6, 1, 5],
-  target = 8;
+let candidates = [1,1,1],
+  target = 2;
 
 // [
 //   [1, 1, 6],
