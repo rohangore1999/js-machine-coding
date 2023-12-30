@@ -20,7 +20,7 @@ const minSubArrayLen = function (target, nums) {
     r++;
   }
 
-  return maxLen;
+  return maxLen === Infinity ? 0 : maxLen;
 };
 
 console.log(minSubArrayLen(target, nums));
