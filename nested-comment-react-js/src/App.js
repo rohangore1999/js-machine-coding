@@ -2,6 +2,7 @@ import React, { useState } from "react";
 
 // Components
 import Comment from "./components/Comment";
+import NestedComponent from "./components/NestedComponent";
 
 // Hooks
 import { useNode } from "./hooks/useNode";
@@ -43,6 +44,10 @@ const App = () => {
         handleEditNode={handleEditNode}
         comment={commentsData}
       />
+
+      <h1>Listing Nested Comments</h1>
+
+      <NestedComponent />
     </div>
   );
 };
