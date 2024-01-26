@@ -27,9 +27,6 @@ const manipulateStr = (s) => {
     // Current char on left pointer
     d = s[i];
 
-    console.log({ d });
-    console.log({ i, j });
-
     // Shift i towards right
     while (i <= j && s[i] == d) i += 1;
 
