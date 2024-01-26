@@ -1,3 +1,7 @@
+// Problem:-
+// https://leetcode.com/problems/minimum-length-of-string-after-deleting-similar-ends/description/
+// https://www.geeksforgeeks.org/minimize-length-of-a-string-by-removing-suffixes-and-prefixes-of-same-characters/
+
 let str = "aabcccabba";
 /**
  * 1) split and rev: cabba|aabcc
