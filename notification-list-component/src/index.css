@@ -1,0 +1,152 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto", sans-serif;
+}
+
+html,
+body {
+  background: #ecf0f1;
+}
+
+main {
+  position: relative;
+}
+
+.content {
+  width: 300px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: all 0.2s ease-in-out;
+  margin: 30px;
+  padding: 20px;
+  background: #fff;
+  border-radius: 4px;
+}
+
+.content h1 {
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.content .actions {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.content .actions button {
+  padding: 7px;
+  color: white;
+  font-weight: medium;
+  border: none;
+  border-radius: 4px;
+}
+
+.content .actions button:hover {
+  cursor: pointer;
+}
+
+.content .actions button.info {
+  background-color: #3498db;
+}
+
+.content .actions button.success {
+  background-color: #2ecc71;
+}
+
+.content .actions button.warning {
+  background-color: #f1c40f;
+}
+
+.content .actions button.error {
+  background-color: #e74c3c;
+}
+
+.notifications-wrapper {
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  width: 300px;
+  z-index: 999999;
+}
+
+.notification-item {
+  border: 1px solid transparent;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  border-radius: 4px;
+  overflow: hidden;
+  margin-bottom: 20px;
+  animation: SlideLeft 0.4s;
+  animation-fill-mode: forwards;
+  width: 300px;
+  z-index: 100;
+  background: #fff;
+}
+
+.notification-item.exit {
+  animation: SlideRight 0.4s;
+  animation-fill-mode: forwards;
+}
+
+.notification-item p {
+  margin: 0;
+  padding: 15px;
+}
+
+.notification-item .progress-bar {
+  height: 10px;
+}
+
+.notification-item.success {
+  border-color: #2ecc71;
+}
+
+.notification-item.success .progress-bar {
+  background-color: #2ecc71;
+}
+
+.notification-item.error {
+  border-color: #e74c3c;
+}
+
+.notification-item.error .progress-bar {
+  background-color: #e74c3c;
+}
+
+.notification-item.info {
+  border-color: #3498db;
+}
+
+.notification-item.info .progress-bar {
+  background-color: #3498db;
+}
+
+.notification-item.warning {
+  border-color: #f1c40f;
+}
+
+.notification-item.warning .progress-bar {
+  background-color: #f1c40f;
+}
+
+@keyframes SlideLeft {
+  0% {
+    margin-left: 120%;
+  }
+
+  100% {
+    margin-left: 0;
+  }
+}
+
+@keyframes SlideRight {
+  0% {
+    margin-left: 0;
+  }
+
+  100% {
+    margin-left: 120%;
+  }
+}

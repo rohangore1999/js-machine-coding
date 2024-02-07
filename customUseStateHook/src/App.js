@@ -3,7 +3,6 @@ import ReactDOM from "react-dom/client";
 
 const App = () => {
   const [minutes, setMinutes] = useState(5);
-  const [error, setError] = useState(null);
 
   console.log({ states });
 
@@ -24,7 +23,6 @@ let calls = -1;
 // custome useState
 function useState(defaultValue) {
   const callId = ++calls;
-  console.log({ callId });
 
   if (states[callId]) return states[callId];
 
