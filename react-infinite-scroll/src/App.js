@@ -8,6 +8,14 @@ const App = () => {
     divs.push(<div>{i + 1}</div>);
   }
 
+/**
+ * 
+ * window.innerHeight represents the height of the visible part of the window (the viewport).
+ * window.scrollY represents how far the user has scrolled down in the window.
+ * window.document.body.offsetHeight represents the total height of the entire document (including the non-visible parts).
+ * 
+ */
+
   useEffect(() => {
     const handleScroll = () => {
       if (
