@@ -17,7 +17,7 @@ const Carousel = ({ images }) => {
       setCurrentImage(currentImage + 1);
     }
   };
-  ///
+
 
   useEffect(() => {
     const intervalId = setInterval(() => {
