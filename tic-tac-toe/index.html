@@ -92,13 +92,24 @@
 
           if (e.target.nodeName === "DIV") {
             if (e.target.classList.contains("cell")) {
-              e.target.innerText = currentPlayer;
+              let nextValue = getMineSweeperValue();
+              console.log({ nextValue });
+
+              let printValue = currentPlayer;
+              if (nextValue === "*") {
+                // if we get blocker then we have to print and turn got wasted
+                printValue = "*";
+              }
+
+              e.target.innerText = printValue;
               const rowId = e.target.dataset.row;
               const cellId = e.target.dataset.cell;
 
               updateGameData(rowId, cellId, currentPlayer);
 
-              changePlayer();
+              if (nextValue !== "+") {
+                changePlayer();
+              }
             }
           }
         });
@@ -117,15 +128,42 @@
         }
 
         // check cols values
-        for (let i = 0; i < game[0].length; i++) {
+        for (let i = 0; i < game.length; i++) {
           const columnValues = game.map((row) => row[i]);
 
           if (checkLine(columnValues)) return true; // passing ith row
+        }
+
+        // check diagonal values
+        for (let i = 0; i < game.length; i++) {
+          const diagonalValues = game.map((row, idx) => row[idx]);
+
+          if (checkLine(diagonalValues)) return true; // passing ith row
+        }
+
+        // check reverse diagonal values
+        for (let i = 0; i < game.length; i++) {
+          const revDiagonal = game.map((row, idx) => row[game.length - i - 1]);
+
+          if (checkLine(revDiagonal)) return true;
         }
       }
 
       function checkLine(arr) {
         return arr.every((data) => arr[0] === data); // checking if the 1st element of an is same as rest of the array which we passed
+      }
+
+      function getMineSweeperValue() {
+        /**
+          '*' -> turn wasted
+          '+' -> extra turn 
+          '-' -> normal turn
+        */
+
+        const options = ["*", "+", "-"];
+        const randomValue = Math.ceil(Math.random() * 10) % 3;
+
+        return options[randomValue];
       }
 
       createBoard();
