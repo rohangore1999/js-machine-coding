@@ -31,7 +31,7 @@ const PhoneOtpLogin = () => {
 
   return (
     <div>
-      {!true ? (
+      {!showOtpField ? (
         <form onSubmit={handlePhoneSubmit}>
           <input
             type="text"
