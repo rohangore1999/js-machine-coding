@@ -11,7 +11,9 @@ const getBreadcrumb = (breadcrumbs) => {
   let output = [];
 
   const recurr = (parentId) => {
-    let childrens = breadcrumbs.filter(breadcrumb => breadcrumb.parentId === parentId);
+    let childrens = breadcrumbs.filter(
+      (breadcrumb) => breadcrumb.parentId === parentId
+    );
 
     for (let children of childrens) {
       output.push(children.title);
