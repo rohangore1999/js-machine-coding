@@ -31,8 +31,13 @@ const OTPInput = ({ length = 4, onOTPSubmit = () => {} }) => {
       onOTPSubmit(combinedOtp);
     }
 
-    // Move cursor to next input field
-    if (value && idx < length - 1 && inputRef.current[idx + 1]) {
+    // Move cursor to next empty input field
+    if (
+      value &&
+      idx < length - 1 &&
+      inputRef.current[idx + 1] &&
+      inputRef.current[newOtp.indexOf("")]
+    ) {
       inputRef.current[newOtp.indexOf("")].focus();
     }
   };
