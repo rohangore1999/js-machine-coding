@@ -42,7 +42,7 @@ const App = () => {
     setOrder(newOrder);
 
     // checking for all cells active, if yes then starting to deactivate in reverse
-    // filter(Boolean) -> removing 0's as for 0 we dont maintain index in newOrder
+    // filter(Boolean) -> removing 0's as for 0 we dont maintain index in newOrder.
     if (newOrder.length === config.flat().filter(Boolean).length) {
       deactivateCell();
     }
