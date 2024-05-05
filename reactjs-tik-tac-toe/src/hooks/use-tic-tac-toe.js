@@ -56,7 +56,7 @@ const useTicTakToe = () => {
 
     if (!board.includes(null)) return "Its a draw";
 
-    return `Players ${isXNext ? "X" : "O"} turn`;
+    return `Playerss ${isXNext ? "X" : "O"} turn`;
   };
 
   const resetGame = () => {
