@@ -7,7 +7,7 @@ var addTwoPromises = async function (promise1, promise2) {
 (async () => {
   const res = await addTwoPromises(
     new Promise((resolve) => setTimeout(() => resolve(2), 2000)),
-    new Promise(resolve => setTimeout(() => resolve(5), 6000))
+    new Promise((resolve) => setTimeout(() => resolve(5), 6000))
   );
   console.log(res);
 })();
