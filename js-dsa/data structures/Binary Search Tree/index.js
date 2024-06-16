@@ -88,8 +88,8 @@ BST.prototype.deleteNode = function (node, key) {
       return node.left;
     } else {
       // both child are present
-      // inorder - successor: replace minimum from right subtree
-      let tempNode = this.findMinNode(node.right);
+      // inorder - successor: replace minimum from right subtree // OR we can replace maximum from left subtree (inorder predeccessor)
+      let tempNode = this.findMinNode(node.right); // OR let tempNode = this.findMaxNode(node.left);
 
       // replace the key to be deleted with mini node from right
       node.key = tempNode.key;
@@ -109,6 +109,14 @@ BST.prototype.findMinNode = function (node) {
   }
 
   // return the left node
+  return node;
+};
+
+BST.prototype.findMaxNode = function (node) {
+  while (node.right) {
+    node = node.right;
+  }
+
   return node;
 };
 
