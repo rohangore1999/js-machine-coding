@@ -45,11 +45,16 @@ BST.prototype.insertNode = function (node, newNode) {
 };
 
 BST.prototype.printNode = function () {
-  console.log("In order traversal [Left - Root - Right]: \n");
-
   if (!this.root) return;
 
+  console.log("\n Pre order traversal [Left - Root - Right]: \n");
+  this.preOrderTraverse(this.root);
+
+  console.log("\n In order traversal [Left - Root - Right]: \n");
   this.inOrderTraverse(this.root);
+
+  console.log("\n Post order traversal [Left - Root - Right]: \n");
+  this.postOrderTraverse(this.root);
 };
 
 BST.prototype.inOrderTraverse = function (node) {
@@ -57,6 +62,22 @@ BST.prototype.inOrderTraverse = function (node) {
     this.inOrderTraverse(node.left);
     console.log(node.key);
     this.inOrderTraverse(node.right);
+  }
+};
+
+BST.prototype.preOrderTraverse = function (node) {
+  if (node) {
+    console.log(node.key);
+    this.inOrderTraverse(node.left);
+    this.inOrderTraverse(node.right);
+  }
+};
+
+BST.prototype.postOrderTraverse = function (node) {
+  if (node) {
+    this.inOrderTraverse(node.left);
+    this.inOrderTraverse(node.right);
+    console.log(node.key);
   }
 };
 
