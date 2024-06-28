@@ -15,7 +15,7 @@ const sum = (...args) => {
     return temp;
   };
 
-  // if more that one call ()()
+  // if more that one call ()() - First time
   return temp;
 };
 

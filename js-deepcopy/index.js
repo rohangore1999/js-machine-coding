@@ -37,5 +37,5 @@ const json = {
 
 const copiedJson = Object.deepCopy(json);
 let temp = { ...json };
-console.log(copiedJson === json);
-console.log(temp == json);
+console.log(copiedJson === json); // false (deep copy)
+console.log(temp == json); // false (shallow copy)

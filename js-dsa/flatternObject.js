@@ -34,15 +34,12 @@ var user = {
 
 const flattenObject = (obj) => {
   let result = {};
-  let newKey = "";
 
   const recurr = (obj, keyName = "") => {
     for (let key in obj) {
-      newKey = keyName + key;
+      let newKey = keyName ? keyName + "_" + key : key;
 
       if (typeof obj[key] === "object") {
-        newKey += "_";
-
         recurr(obj[key], newKey);
       } else {
         result[newKey] = obj[key];

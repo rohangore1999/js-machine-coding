@@ -5,8 +5,9 @@
 //       c: 1,
 //     },
 //   },
+//   d: [45, 78],
+//   z: true,
 // };
-
 // output flat json-
 // {"a.b.c": 1, "d.0": 45, "d.1": 78, "z": true}
 
@@ -111,3 +112,50 @@ const calculateTotalSalary = (organisation) => {
 };
 
 console.log(calculateTotalSalary(organisation));
+
+// ----------------------------------------------------------------------------------
+
+const obj = {
+  a: 1,
+  b: {
+    c: 2,
+    d: -3,
+    e: {
+      f: {
+        g: -4,
+      },
+    },
+    h: {
+      i: 5,
+      j: 6,
+    },
+  },
+};
+
+const deepFilter = (inputObject, callbackFilterFn) => {
+  const recur = (obj) => {
+    for (let key in obj) {
+      if (Array.isArray(obj[key])) {
+        // todo
+      } else if (typeof obj[key] === "object") {
+        recur(obj[key]);
+      } else if (!callbackFilterFn(obj[key])) {
+        console.log(obj[key]);
+        delete obj[key];
+
+        if (Object.keys(obj).length === 0) {
+          console.log(obj);
+          // delete obj
+        }
+      }
+    }
+  };
+  recur(inputObject);
+
+  return inputObject;
+};
+
+const filter = (n) => n >= 0;
+
+console.log(deepFilter(obj, filter));
+// { a: 1, b: { c: 2, h: { i: 5, j: 6 } } }
