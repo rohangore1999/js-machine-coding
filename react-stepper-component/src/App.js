@@ -15,6 +15,7 @@ const Example1 = ({ onPrev, onNext }) => {
     </div>
   );
 };
+
 const Example2 = ({ onPrev, onNext }) => {
   return (
     <div>
@@ -27,6 +28,7 @@ const Example2 = ({ onPrev, onNext }) => {
     </div>
   );
 };
+
 const Example3 = ({ onPrev, onNext }) => {
   return (
     <div>
@@ -39,6 +41,7 @@ const Example3 = ({ onPrev, onNext }) => {
     </div>
   );
 };
+
 const Example4 = ({ onPrev, onNext }) => {
   return (
     <div>

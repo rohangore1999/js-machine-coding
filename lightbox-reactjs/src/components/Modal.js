@@ -9,7 +9,7 @@ const Modal = ({ children, show, onClose, title }) => {
       <>
         <div className="modal-backdrop" onClick={onClose}></div>
 
-        <div className={`modal-wrapper ${show ? "active" : ""}`}>
+        <div className={` -wrapper ${show ? "active" : ""}`}>
           <div className="modal-header">
             <div className="modal-title">{title}</div>
             <div className="modal-close" onClick={onClose}>

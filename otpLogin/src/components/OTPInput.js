@@ -36,7 +36,7 @@ const OTPInput = ({ length = 4, onOTPSubmit = () => {} }) => {
       value &&
       idx < length - 1 &&
       inputRef.current[idx + 1] &&
-      inputRef.current[newOtp.indexOf("")]
+      inputRef.current[newOtp.indexOf("")] // indexOf will return 1st empty field
     ) {
       inputRef.current[newOtp.indexOf("")].focus();
     }

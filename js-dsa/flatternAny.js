@@ -139,14 +139,14 @@ const deepFilter = (inputObject, callbackFilterFn) => {
         // todo
       } else if (typeof obj[key] === "object") {
         recur(obj[key]);
+
+        if (Object.keys(obj[key]).length === 0) {
+          // delete obj
+          delete obj[key];
+        }
       } else if (!callbackFilterFn(obj[key])) {
         console.log(obj[key]);
         delete obj[key];
-
-        if (Object.keys(obj).length === 0) {
-          console.log(obj);
-          // delete obj
-        }
       }
     }
   };

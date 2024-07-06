@@ -40,7 +40,7 @@
         flag = false;
         fn.apply(this, args);
       }
-
+   
       setTimeout(() => {
         flag = true;
       }, delay);
