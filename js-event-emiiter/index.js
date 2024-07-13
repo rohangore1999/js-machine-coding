@@ -1,7 +1,10 @@
 class EventEmitter {
-  constructor() {
-    this.eventObj = {};
-  }
+//   constructor() {
+//     this.eventObj = {};
+//   }
+
+  // or just
+  eventObj = {}; 
 
   subscribe(eventName, callback) {
     if (this.eventObj[eventName]) {
