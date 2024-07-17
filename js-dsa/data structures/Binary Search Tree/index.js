@@ -57,6 +57,14 @@ BST.prototype.printNode = function () {
   this.postOrderTraverse(this.root);
 };
 
+BST.prototype.preOrderTraverse = function (node) {
+  if (node) {
+    console.log(node.key);
+    this.preOrderTraverse(node.left);
+    this.preOrderTraverse(node.right);
+  }
+};
+
 BST.prototype.inOrderTraverse = function (node) {
   if (node) {
     this.inOrderTraverse(node.left);
@@ -65,18 +73,10 @@ BST.prototype.inOrderTraverse = function (node) {
   }
 };
 
-BST.prototype.preOrderTraverse = function (node) {
-  if (node) {
-    console.log(node.key);
-    this.inOrderTraverse(node.left);
-    this.inOrderTraverse(node.right);
-  }
-};
-
 BST.prototype.postOrderTraverse = function (node) {
   if (node) {
-    this.inOrderTraverse(node.left);
-    this.inOrderTraverse(node.right);
+    this.postOrderTraverse(node.left);
+    this.postOrderTraverse(node.right);
     console.log(node.key);
   }
 };
@@ -141,6 +141,49 @@ BST.prototype.findMaxNode = function (node) {
   return node;
 };
 
+BST.prototype.DFS = function () {
+  let value = [];
+  let stack = [this.root];
+
+  while (stack.length) {
+    let node = stack.pop();
+
+    value.push(node.key);
+
+    if (node.right) {
+      stack.push(node.right);
+    }
+
+    if (node.left) {
+      stack.push(node.left);
+    }
+  }
+
+  return value;
+};
+
+BST.prototype.BFS = function () {
+  let values = [];
+  let queue = [this.root];
+
+  while (queue.length) {
+    // process the node
+    let node = queue.shift();
+
+    values.push(node.key);
+
+    if (node.left) {
+      queue.push(node.left);
+    }
+
+    if (node.right) {
+      queue.push(node.right);
+    }
+  }
+
+  return values;
+};
+
 let bst = new BST();
 bst.insert(15);
 bst.insert(9);
@@ -150,8 +193,23 @@ bst.insert(19);
 bst.insert(18);
 bst.insert(30);
 
+/**
+ *              15
+ *          9        19
+ *        4  12    18  30
+ */
+
+console.log("Printing Nodes");
 bst.printNode();
 
+console.log("Deleting node 4");
 bst.delete(4);
 
+console.log("After Deleting node 4");
 bst.printNode();
+
+console.log("\n DFS \n");
+console.log(bst.DFS());
+
+console.log("\n BFS \n");
+console.log(bst.BFS());

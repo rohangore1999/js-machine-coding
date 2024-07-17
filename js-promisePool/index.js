@@ -1,7 +1,7 @@
 /**
  * promisePool func defination
  * 1. accept array of functions
- * 2. no. of promise to be executed at same time.
+ * 2. no. of promise/func to be executed at same time.
  */
 
 const promisePool = function (functions, n) {

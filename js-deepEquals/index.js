@@ -1,3 +1,55 @@
+const deepEqual = (o1, o2) => {
+  // null check as typeof null is object
+  if (o1 === null || o2 === null) {
+    return o1 === o2;
+  }
+
+  // check for both objs
+  if (typeof o1 !== typeof o2) {
+    return false;
+  }
+
+  // check for primitive
+  if (typeof o1 !== "object") {
+    return o1 === o2;
+  }
+
+  // check of an Array
+  if (Array.isArray(o1) || Array.isArray(o2)) {
+    // if any one is Array we need to fall in this IF block
+
+    // 1: [undefined] {'a':1} // give true, so convert to string and compare
+    if (String(o1) !== String(o2)) {
+      // check for [] and {}
+      return false;
+    }
+
+    // 2. Both are [] and []; looping over array ele.
+    for (let i = 0; i < o1.length; i++) {
+      if (!deepEqual(o1[i], o2[i])) {
+        // recursively calling with element
+        return false;
+      }
+    }
+  } else {
+    // Check of Objects
+
+    // 1. Checking for keys
+    if (Object.keys(o1).length !== Object.keys(o2).length) {
+      return false;
+    }
+
+    // 2. Iterate over object as both have same length of keys
+    for (let key in o1) {
+      if (!deepEqual(o1[key], o2[key])) {
+        return false;
+      }
+    }
+  }
+
+  return true;
+};
+
 const deepEquals = (valueOne, valueTwo) => {
   // 1) Checking for primitive data types
   if (typeof valueOne !== "object" && typeof valueTwo !== "object") {
