@@ -159,3 +159,35 @@ const filter = (n) => n >= 0;
 
 console.log(deepFilter(obj, filter));
 // { a: 1, b: { c: 2, h: { i: 5, j: 6 } } }
+
+// ------------------------------------------------------------------
+
+let input = {
+  A: (a, b, c) => a + b + c,
+  B: (a, b, c) => a - b - c,
+  C: (a, b, c) => a + b * c,
+  D: {
+    E: (a, b, c) => a + b + c,
+    F: (a, b, c) => a + b + c,
+    G: {
+      H: (a, b, c) => a + b + c,
+      I: (a, b, c) => a + b + c,
+    },
+  },
+};
+
+const compute = (input, a, b, c) => {
+  const output = {};
+
+  for (let key in input) {
+    if (typeof input[key] === "object") {
+      output[key] = compute(input[key], a, b, c);
+    } else {
+      output[key] = input[key](a, b, c);
+    }
+  }
+
+  return output;
+};
+
+console.log(compute(input, 1, 1, 1));

@@ -1,10 +1,10 @@
 class EventEmitter {
-//   constructor() {
-//     this.eventObj = {};
-//   }
+  constructor() {
+    this.eventObj = {};
+  }
 
   // or just
-  eventObj = {}; 
+  // eventObj = {};
 
   subscribe(eventName, callback) {
     if (this.eventObj[eventName]) {
@@ -41,20 +41,20 @@ const emitter = new EventEmitter();
 
 // Subscribe to the onClick event with onClickCallback
 function onClickCallback() {
-  return 99;
+  return 1;
 }
 
 function onClickCallback1() {
-  return 99;
+  return 2;
 }
 
 function onClickCallback2() {
-  return 99;
+  return 3;
 }
 const sub = emitter.subscribe("onClick", onClickCallback);
 const sub1 = emitter.subscribe("onClick", onClickCallback1);
 const sub2 = emitter.subscribe("onClick", onClickCallback2);
 
-emitter.emit("onClick"); // [99]
-sub.unsubscribe(); // undefined
+emitter.emit("onClick"); // [1,2,3]
+sub.unsubscribe(); // [2,3] as we use sub's context and unsubscribing to that so 1 will get removed
 emitter.emit("onClick"); // []

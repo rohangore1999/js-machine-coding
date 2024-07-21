@@ -1,4 +1,4 @@
-//Returns and stores the inner function.
+// Returns and stores the inner function.
 const curry = () => {
   let sum = 0;
 
