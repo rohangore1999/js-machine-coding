@@ -1,0 +1,12 @@
+.container {
+  width: 500px;
+}
+
+.loading-bar {
+  border: 1px solid black;
+
+  .progress {
+    height: 20px;
+    width: 0%;
+  }
+}
