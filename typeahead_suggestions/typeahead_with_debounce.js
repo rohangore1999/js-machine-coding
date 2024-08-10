@@ -1,5 +1,5 @@
 (() => {
-  const input = document.getElementById("input-field");
+  const input = document.getElementById("input");
   const suggestionBox = document.getElementById("suggestion-box");
   const FRUITS = ["Mango", "Muskmellon", "Apple", "Banana", "Grapes"];
 
