@@ -1,0 +1,12 @@
+.contextBtn .label {
+  display: block;
+  cursor: pointer;
+}
+
+.contextBtn .content {
+  display: none;
+}
+
+.contextBtn.active .content {
+  display: block;
+}
