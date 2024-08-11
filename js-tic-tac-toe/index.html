@@ -116,7 +116,9 @@
       }
 
       function checkLine(arr) {
-        return arr.every((item) => item === arr[0] && item !== undefined);
+        return arr.every(
+          (item) => item === arr[0] && item !== undefined && item !== "*"
+        );
       }
 
       function getWinner() {
