@@ -5,10 +5,10 @@ const container = document.querySelector(".container");
 const queue = document.querySelector("#count");
 const startBtn = document.querySelector("#start");
 
-startBtn.addEventListener("click", () => increaseCnt(1));
+startBtn.addEventListener("click", increaseCnt);
 
-function increaseCnt(val) {
-  count += val;
+function increaseCnt() {
+  count += 1;
   queue.innerHTML = count;
 
   // If the count is 1, then only start processing the queue immediately
@@ -34,7 +34,7 @@ function handleBtnClick() {
 
     // Trigger the progress bar animation in the next event loop
     // Immediate Animation Trigger: Normally, if you set the width to 100% right after setting it to 0%, the browser may not recognize it as a change, and the animation may not occur as expected. This is because the browser can batch style changes and might not register the transition.
-    
+
     // Using setTimeout: By using setTimeout with a delay of 0, you're effectively telling the browser to wait until the current call stack is cleared (the current execution context is complete) and then execute the code inside setTimeout.
     // This small delay ensures that the browser has time to apply the initial width: 0% and then, in the next event loop, changes it to 100%. This triggers the transition defined in CSS (transition: width 3s linear;), resulting in a smooth animation.
 

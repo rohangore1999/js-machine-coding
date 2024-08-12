@@ -1,0 +1,16 @@
+.tic-tac-toe {
+  width: 100px;
+}
+
+.tic-tac-toe .row {
+  display: flex;
+}
+
+.tic-tac-toe .cell {
+  width: 30px;
+  height: 30px;
+  border: 1px solid black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
