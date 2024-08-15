@@ -26,9 +26,9 @@ function highlightHelper(elementDimensions) {
   // it will create new element around the targeted element
   console.log({ elementDimensions });
 
-  let top = elementDimensions.top;
+  let top = elementDimensions.top + window.scrollY;
   let bottom = elementDimensions.bottom;
-  let left = elementDimensions.left;
+  let left = elementDimensions.left + window.scrollX;
   let right = elementDimensions.right;
   let height = elementDimensions.height;
   let width = elementDimensions.width;
@@ -85,7 +85,7 @@ function navigationButton() {
   prevBtn.textContent = "prev";
   prevBtn.addEventListener("click", function () {
     if (index > 0) {
-      highlight(steps[-index]);
+      highlight(steps[--index]);
     }
   });
 
@@ -107,9 +107,7 @@ function navigationButton() {
 
 // scroll to element(popover)
 function scrollTo(element) {
-  let eleTop = element.offsetTop;
-  console.log(eleTop);
-//   window.scrollTo(0, 228);
+  element.scrollIntoView({ behavior: "smooth", block: "center" });
 }
 
 highlight(steps[index]);
